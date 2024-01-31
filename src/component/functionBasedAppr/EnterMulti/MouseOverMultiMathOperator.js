@@ -1,16 +1,14 @@
 import React from 'react'
+import HocLogic from '../hoc/HocLogic';
 
-const MouseOverMultiMathOperator = () => {
-    const [mul,setMul] = React.useState(1);
-    const onMul = ()=> {
-        setMul((p) => p*2)
-    }
+const MouseOverMultiMathOperator = (props) => {
+   
   return (
    <>
-    <div>{mul}</div>
-    <div onMouseEnter={onMul}>ClickMultiMathOperator</div>
+    
+    <div onMouseEnter={props.onDecrement}>{props.buttonText}</div>
    </>
   )
 }
 
-export default MouseOverMultiMathOperator
+export default HocLogic(MouseOverMultiMathOperator)

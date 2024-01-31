@@ -16,8 +16,8 @@ function App() {
 
 
      <div>--------------------------------------------------------------</div>
-     <MouseOverMultiMathOperator />
-     <ClickMultiMathOperator />
+     <MouseOverMultiMathOperator buttonText='enter' />
+     <ClickMultiMathOperator buttonText="click" />
 
     </div>
   );

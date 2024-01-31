@@ -1,16 +1,15 @@
 import React from 'react'
+import HocLogic from '../hoc/HocLogic';
 
-const ClickMultiMathOperator = () => {
-    const [mul,setMul] = React.useState(1);
-    const onMul = ()=> {
-        setMul((p) => p*2)
-    }
+const ClickMultiMathOperator = (props) => {
+  console.log(props)
+  
   return (
    <>
-    <div>{mul}</div>
-    <div onClick={onMul}>ClickMultiMathOperator</div>
+   
+    <div onClick={props.onDecrement}>{props.buttonText}</div>
    </>
   )
 }
 
-export default ClickMultiMathOperator
+export default HocLogic(ClickMultiMathOperator)
