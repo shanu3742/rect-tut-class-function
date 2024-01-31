@@ -7,7 +7,9 @@ const CounterComp = () => {
     console.log('counterState',counterState);
     const dispatch = useDispatch()
     const onIncrement = () => {
-       dispatch(onIncrementCounter())
+      //  dispatch({type:'INCREMENT',payload:0})
+      //onIncrement just return a object having type and payload
+       dispatch(onIncrement)
     }
 
     const onDecrement = () => {
