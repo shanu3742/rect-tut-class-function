@@ -7,6 +7,7 @@ import ClickMultiMathOperator from './component/functionBasedAppr/ClickMulti/Cli
 import CounterComp from './component/functionBasedAppr/counter/CounterComp';
 import Product from './component/functionBasedAppr/Product/product';
 import WelcomeComp from './component/WelcomeComp/WelcomeComp';
+import IncDecCounter from './component/functionBasedAppr/IncDecCounter/IncDecCounter';
 
 function App() {
   const [toggle,setToggle] = useState(false);
@@ -42,6 +43,11 @@ function App() {
     <div>++++++++++++++++++++++ forward ref ++++++++++++++++++++</div>
     <WelcomeComp ref={childRef}  text='hello'  />
     <div  onClick={onPressed}>Pressed It</div>
+
+
+
+    <div>inc/dec</div>
+     <IncDecCounter />
     </div>
 
 
