@@ -1,14 +1,22 @@
 
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import './App.css';
 import { Counter } from './component/classedBasedAppr/Counter';
 import MouseOverMultiMathOperator from './component/functionBasedAppr/EnterMulti/MouseOverMultiMathOperator';
 import ClickMultiMathOperator from './component/functionBasedAppr/ClickMulti/ClickMultiMathOperator';
 import CounterComp from './component/functionBasedAppr/counter/CounterComp';
 import Product from './component/functionBasedAppr/Product/product';
+import WelcomeComp from './component/WelcomeComp/WelcomeComp';
 
 function App() {
-  const [toggle,setToggle] = useState(false)
+  const [toggle,setToggle] = useState(false);
+  const childRef = useRef();
+
+  console.log(childRef.current)
+
+  const onPressed = () => {
+    console.log(childRef.current)
+  }
   return (
     <div className="App">
    {
@@ -29,6 +37,11 @@ function App() {
 
     <div>++++++++++++ redux thunks ++++++++++++++++++++++++++++ </div>
     <Product />
+
+
+    <div>++++++++++++++++++++++ forward ref ++++++++++++++++++++</div>
+    <WelcomeComp ref={childRef}  text='hello'  />
+    <div  onClick={onPressed}>Pressed It</div>
     </div>
 
 
