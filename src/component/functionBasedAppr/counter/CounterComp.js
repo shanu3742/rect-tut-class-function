@@ -3,8 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { onDecerementCounter, onIncrementCounter } from '../../../redux/action/counter.action';
 
 const CounterComp = () => {
-    const counterState = useSelector((state) => state)
-    console.log('counterState',counterState);
+    const counterState = useSelector((state) => state?.counter)
     const dispatch = useDispatch()
     const onIncrement = () => {
       //  dispatch({type:'INCREMENT',payload:0})
@@ -18,7 +17,7 @@ const CounterComp = () => {
   return (
     <>
     <div onClick={onDecrement}>-</div>
-    <div>{counterState.counter}</div>
+    <div>{counterState}</div>
     <div  onClick={onIncrement}>+</div>
     </>
   )
