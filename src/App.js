@@ -7,7 +7,11 @@ import ClickMultiMathOperator from './component/functionBasedAppr/ClickMulti/Cli
 import CounterComp from './component/functionBasedAppr/counter/CounterComp';
 import Product from './component/functionBasedAppr/Product/product';
 import WelcomeComp from './component/WelcomeComp/WelcomeComp';
+<<<<<<< HEAD
 import PerformanceComp from './component/performaceComponent/PerformanceComp';
+=======
+import IncDecCounter from './component/functionBasedAppr/IncDecCounter/IncDecCounter';
+>>>>>>> 75c2ac780974f2f52b88aac2c40eae3ba75026a2
 
 function App() {
   const [toggle,setToggle] = useState(false);
@@ -31,12 +35,17 @@ function App() {
      <div>+++++++++++++++   redux counter +++++++++++++++++++++++++++++++</div>
         <CounterComp />
     <div>++++++++++++ redux thunks ++++++++++++++++++++++++++++ </div>
-    {/* <Product /> */}
+     <Product /> 
     <div>++++++++++++++++++++++ forward ref ++++++++++++++++++++</div>
     <WelcomeComp ref={childRef}  text='hello'  />
     <div  onClick={onPressed}>Pressed It</div>
     <div> ++++app performance+++++++</div>
       <PerformanceComp />
+
+
+
+    <div>inc/dec</div>
+     <IncDecCounter />
     </div>
 
   );
