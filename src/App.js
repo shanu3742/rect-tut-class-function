@@ -7,6 +7,7 @@ import ClickMultiMathOperator from './component/functionBasedAppr/ClickMulti/Cli
 import CounterComp from './component/functionBasedAppr/counter/CounterComp';
 import Product from './component/functionBasedAppr/Product/product';
 import WelcomeComp from './component/WelcomeComp/WelcomeComp';
+import PerformanceComp from './component/performaceComponent/PerformanceComp';
 
 function App() {
   const [toggle,setToggle] = useState(false);
@@ -23,29 +24,20 @@ function App() {
     toggle &&   <Counter color='red' />
    }
      <button onClick={()=>setToggle(!toggle)}>Toggle</button>
-
-
      <div>--------------------------------------------------------------</div>
      <MouseOverMultiMathOperator buttonText='enter' />
      <ClickMultiMathOperator buttonText="click" />
 
      <div>+++++++++++++++   redux counter +++++++++++++++++++++++++++++++</div>
         <CounterComp />
-
-
-
-
     <div>++++++++++++ redux thunks ++++++++++++++++++++++++++++ </div>
-    <Product />
-
-
+    {/* <Product /> */}
     <div>++++++++++++++++++++++ forward ref ++++++++++++++++++++</div>
     <WelcomeComp ref={childRef}  text='hello'  />
     <div  onClick={onPressed}>Pressed It</div>
+    <div> ++++app performance+++++++</div>
+      <PerformanceComp />
     </div>
-
-
-
 
   );
 }
