@@ -2,13 +2,21 @@ import { useDispatch, useSelector } from "react-redux";
 import React from "react";
 import './product.css'
 import { getProduct } from "../../../redux/action/async_action/fetechProduct.action";
+import fetchProductById from "../../../redux/action/async_action/fetchProductById";
 
 const  Product = () => {
-    const state = useSelector((state) => state?.products);
+    const state = useSelector((state) => {
+        console.log(state)
+        return state?.products
+    });
     const dispatch = useDispatch();
     console.log(state);
     React.useEffect(() => {
         dispatch(getProduct())   
+    },[dispatch])
+
+    React.useEffect(() => {
+          dispatch(fetchProductById(1))
     },[dispatch])
     return (
         <div>
